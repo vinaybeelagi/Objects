@@ -11,3 +11,9 @@ Person.match = function play(){
 }
 Person.match();
 console.log(Person);
+let getFunction = function(){
+    return(`${Person.name} played ${Person.field} at the age of${Person.age}`)
+}
+console.log(getFunction());
+
+//object constructor
