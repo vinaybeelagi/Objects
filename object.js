@@ -40,10 +40,19 @@
 // console.log(car['engine'])
 
 // Tasks on object:Hello, object
-const user = {};
-   user.name = "john";
-    user.surname = "smith";
-    user.name ="pete";
-    delete user.name;
-    console.log(user)
+// const user = {};
+//    user.name = "john";
+//     user.surname = "smith";
+//     user.name ="pete";
+//     delete user.name;
+//     console.log(user)
 
+    // task-Check for emptiness
+    function isEmpty(obj) {
+        for(let key in obj) {
+            return false;
+        }
+        return true;
+    }
+let obj = {}
+console.log(isEmpty(obj));
