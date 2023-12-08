@@ -16,4 +16,12 @@ let getFunction = function(){
 }
 console.log(getFunction());
 
-//object constructor
+//object constructor method
+function Vehicle(name,maker,engine){
+    this.name = name;
+    this.maker = maker;
+    this.engine = engine;
+}
+let car = new Vehicle('figo','ford','1998cc');
+console.log(car.name);
+console.log(car['engine'])
