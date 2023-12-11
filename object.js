@@ -4,9 +4,9 @@
 //     age:35
 // }
 // Person.field = "cricket"; //Adding Key:value to object
-// console.log(Person); 
+// console.log(Person);
 // console.log(Person.age); // Acessing the object key
-// Person.match = function play(){          
+// Person.match = function play(){
 //     console.log("cricket played")  //Adding function to object
 // }
 // Person.match();
@@ -15,7 +15,6 @@
 //     return(`${Person.name} played ${Person.field} at the age of${Person.age}`)
 // }
 // console.log(getFunction());
-
 
 // //object constructor method
 // function Vehicle(name,maker,engine){
@@ -47,7 +46,7 @@
 //     delete user.name;
 //     console.log(user)
 
-    // task-Check for emptiness
+// task-Check for emptiness
 //     function isEmpty(obj) {
 //         for(let key in obj) {
 //             return false;
@@ -75,8 +74,8 @@
 //     width: 200,
 //     height: 300,
 //     title: "My menu"
-//   };  
-    
+//   };
+
 //   // after the call
 //   function multiplyNumeric(obj){
 //     for (let key in obj){
@@ -96,11 +95,59 @@
 // console.log(Object.keys(user));
 
 // Cloning:copying an object variable creates one more reference to the same object.
-let user = {name:"maxwell",age:34};
- let clone = {};
- for (let key in user){
-    clone[key]=user[key];
- }
- clone.age = 31;
- clone.name = "messi";
- console.log(clone.name);
+// let user = {name:"maxwell",age:34};
+//  let clone = {};
+//  for (let key in user){
+//     clone[key]=user[key];
+//  }
+//  clone.age = 31;
+//  clone.name = "messi";
+//  console.log(clone.name);
+
+// structuredClone(object) clones the object with all nested:
+// let user = {name:"viraj",
+// sizes :{
+//     height:130,
+//     width:60
+// }
+// };
+// let clone = structuredClone(user);
+// console.log(user.sizes === clone.sizes);
+// user.sizes.width = 50;
+// console.log(clone.sizes.width);
+
+// Garbage collection:
+// let user2 = {name: "john"}
+// console.log(user2.name);
+// user2 = null;
+// console.log(user2.name);
+
+// Task- Using "this" in object literal
+// Answer: an error.
+// function makeUser(){
+//     return{
+//         name: "john",
+//         ref(){
+//             return this;
+//         }
+//     };
+// }
+// let user = makeUser();
+// alert(user.ref().name);
+
+// task-Create a calculator:
+let calculator = {
+  read() {
+    this.a = +prompt("a?", "0");
+    this.b = +prompt("b?", "0");
+  },
+  sum() {
+    return this.a + this.b;
+  },
+  mul() {
+    return this.a * this.b;
+  },
+};
+calculator.read();
+alert(calculator.sum());
+alert(calculator.mul());
