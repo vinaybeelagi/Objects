@@ -136,18 +136,36 @@
 // alert(user.ref().name);
 
 // task-Create a calculator:
-let calculator = {
-  read() {
-    this.a = +prompt("a?", "0");
-    this.b = +prompt("b?", "0");
-  },
-  sum() {
-    return this.a + this.b;
-  },
-  mul() {
-    return this.a * this.b;
-  },
+// let calculator = {
+//   read() {
+//     this.a = +prompt("a?", "0");
+//     this.b = +prompt("b?", "0");
+//   },
+//   sum() {
+//     return this.a + this.b;
+//   },
+//   mul() {
+//     return this.a * this.b;
+//   },
+// };
+// calculator.read();
+// alert(calculator.sum());
+// alert(calculator.mul());
+
+// Chaining:
+let ladder = {
+    step:0,
+    up(){
+        this.step++;
+        return this;
+    },
+    down(){
+        this.step--;
+        return this;
+    },
+    showStep(){
+        alert(this.step)
+        return this;
+    }
 };
-calculator.read();
-alert(calculator.sum());
-alert(calculator.mul());
+ladder.up().up().down().showStep().down().showStep();
