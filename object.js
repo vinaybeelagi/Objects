@@ -171,15 +171,21 @@
 // ladder.up().up().down().showStep().down().showStep();
 
 // Methods in constructor:
-function User(name) {
-    this.name = name;
+// function User(name) {
+//     this.name = name;
   
-    this.sayHi = function() {
-      alert( "My name is: " + this.name );
-    };
-  }
+//     this.sayHi = function() {
+//       alert( "My name is: " + this.name );
+//     };
+//   }
   
-  let john = new User("John");
+//   let john = new User("John");
   
-  john.sayHi(); // My name is: John
+//   john.sayHi(); // My name is: John
+
+//task-Two functions – one object:
+let obj = {};
+function A() {return obj;}
+function B() {return obj;}
+console.log (new A() === new B());
   
