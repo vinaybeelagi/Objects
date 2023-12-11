@@ -48,23 +48,48 @@
 //     console.log(user)
 
     // task-Check for emptiness
-    function isEmpty(obj) {
-        for(let key in obj) {
-            return false;
-        }
-        return true;
-    }
-let obj = {}
-console.log(isEmpty(obj));
+//     function isEmpty(obj) {
+//         for(let key in obj) {
+//             return false;
+//         }
+//         return true;
+//     }
+// let obj = {}
+// console.log(isEmpty(obj));
 
-//Sum object properties
-let salaries = {
-    John: 100,
-    Ann: 160,
-    Pete: 130
-  };
-  let sum = 0;
-for (let key in salaries) {
-    sum += salaries[key];
-}
-console.log(sum);
+// Task-Sum object properties
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
+//   };
+//   let sum = 0;
+// for (let key in salaries) {
+//     sum += salaries[key];
+// }
+// console.log(sum);
+
+//Task-Multiply numeric property values by 2
+// before the call
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+//   };  
+    
+//   // after the call
+//   function multiplyNumeric(obj){
+//     for (let key in obj){
+//         if(typeof [key]=='number'){
+//            obj[key] *=2
+//         }
+//     }
+// }
+// multiplyNumeric(menu)
+// console.log(menu)
+
+// Object references and copying:variable to access the object and modify its contents
+let user = {name1: "john"};
+let admin = user;
+admin.name1 = "david";
+console.log(user.name1);
