@@ -89,7 +89,18 @@
 // console.log(menu)
 
 // Object references and copying:variable to access the object and modify its contents
-let user = {name1: "john"};
-let admin = user;
-admin.name1 = "david";
-console.log(user.name1);
+// let user = {name1: "john",age:32,car:"ford"};
+// let admin = user;
+// admin.name1 = "david";
+// console.log(user.name1);
+// console.log(Object.keys(user));
+
+// Cloning:copying an object variable creates one more reference to the same object.
+let user = {name:"maxwell",age:34};
+ let clone = {};
+ for (let key in user){
+    clone[key]=user[key];
+ }
+ clone.age = 31;
+ clone.name = "messi";
+ console.log(clone.name);
