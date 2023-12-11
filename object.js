@@ -153,19 +153,33 @@
 // alert(calculator.mul());
 
 // Chaining:
-let ladder = {
-    step:0,
-    up(){
-        this.step++;
-        return this;
-    },
-    down(){
-        this.step--;
-        return this;
-    },
-    showStep(){
-        alert(this.step)
-        return this;
-    }
-};
-ladder.up().up().down().showStep().down().showStep();
+// let ladder = {
+//     step:0,
+//     up(){
+//         this.step++;
+//         return this;
+//     },
+//     down(){
+//         this.step--;
+//         return this;
+//     },
+//     showStep(){
+//         alert(this.step)
+//         return this;
+//     }
+// };
+// ladder.up().up().down().showStep().down().showStep();
+
+// Methods in constructor:
+function User(name) {
+    this.name = name;
+  
+    this.sayHi = function() {
+      alert( "My name is: " + this.name );
+    };
+  }
+  
+  let john = new User("John");
+  
+  john.sayHi(); // My name is: John
+  
