@@ -189,24 +189,38 @@
 // function B() {return obj;}
 // console.log (new A() === new B());
 
-//Create new Calculator
-function Calculator() {
-    this.read = function() {
-        this.a = +prompt('a?',0);
-        this.b = +prompt('b?',0);
-    };
+//task-Create new Calculator
+// function Calculator() {
+//     this.read = function() {
+//         this.a = +prompt('a?',0);
+//         this.b = +prompt('b?',0);
+//     };
 
-    this.sum = function() {
-     return this.a + this.b;
-    };
+//     this.sum = function() {
+//      return this.a + this.b;
+//     };
 
-    this.mul = function() {
-        return this.a*this.b;
-    };
+//     this.mul = function() {
+//         return this.a*this.b;
+//     };
+// }
+
+// let calculator = new Calculator();
+// calculator.read();
+
+// alert("sum=" +calculator.sum());
+// alert("mul=" +calculator.mul());
+
+//Task- Create new Accumulator:
+function Accumulator(startingValue) {
+    this.value = startingValue;
+
+    this.raed = function(){
+        this.value+ = +prompt("how much to add?","0")
+      };
 }
 
-let calculator = new Calculator();
-calculator.read();
-
-alert("sum=" +calculator.sum());
-alert("mul=" +calculator.mul());
+let accumalator = new Accumulator(1);
+accumalator.read();
+accumalator.read();
+alert(accumalator.value);
